@@ -13,7 +13,7 @@ const App = () => {
   );
 
   const handleIncrement = useCallback(habit => {
-    setHabits(habits.map(item => {
+    setHabits(habits => habits.map(item => {
         if (item.id === habit.id) {
           return {...habit, count: habit.count + 1}
         } else return item;
@@ -49,9 +49,10 @@ const App = () => {
   }, []);
 
   const handleAdd = useCallback(name => {
-    const newId = habits.length + 1;
-    setHabits(habits => 
-      [...habits, { id: newId, name, count: 0 }]
+    setHabits(habits => {
+      const newId = habits.length + 1;
+      return [...habits, { id: newId, name, count: 0 }]
+    }
     );
   }, []);
 
