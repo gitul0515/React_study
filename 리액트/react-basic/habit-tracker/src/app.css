@@ -1,0 +1,109 @@
+ul {
+  list-style: none; 
+  margin: 0; 
+  padding-left: 0
+}
+
+.app {
+  width: 450px;
+  margin: auto;
+}
+
+.header {
+  background-color: #FDE7C4;
+  padding: 18px;
+  font-size: 1.8rem;
+}
+
+.header__icon {
+  color: green;
+  margin-right: 10px;
+}
+
+.header__title {
+  margin-right: 10px;
+}
+
+.header__habit-types {
+  background-color: green;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+}
+
+.form__input {
+  flex-basis: 80%;
+  outline: none;
+  border: 1px solid lightgray;
+  font-size: 1.6rem;
+
+}
+
+.form__btn {
+  flex-basis: 14%;
+  padding: 4px;
+  font-size: 1.2rem;
+  background-color: green;
+  color: white;
+}
+
+button {
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.habit {
+  font-size: 2.5rem;
+  padding: 0.3em 0.5em;
+}
+
+.habit__count {
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  margin-left: 0.2em;
+  margin-right: 0.5em;
+  background-color: darkseagreen;
+  color: white;
+  border-radius: 50%;
+}
+
+.habit__btn {
+  font-size: 2.5rem;
+  margin: 0 0.1em;
+  background-color: transparent;
+}
+
+.habit__btn:hover {
+  opacity: 0.8;
+}
+
+.habit__btn--plus, .habit__btn--minus {
+  color: goldenrod;
+}
+
+.habit__btn--trash {
+  font-size: 2rem;
+  color: darkred;
+}
+
+.btn--reset {
+  color: white;
+  background-color: green;
+  font-size: 1.2rem;
+  padding: 4px 16px;
+  margin-top: 10px;
+}
