@@ -1,0 +1,146 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-red:#E03A3E;
+  --color-dark-grey: #4d4d4d;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-yellow: #fff7d1;
+  --color-black: #000000;
+  --color-light-yellow: #E5FCC2;
+  --color-green: #4fbb2e;
+  --color-beige: beige;
+  --color-brown: #BE5108;
+  --color-light-brown: #F8CBAD;
+  --color-lighter-brown: #FBE5D6;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 24px;
+  --font-small: 18px;
+  --font-micro: 12px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Font line-height */
+  --line-height-size: 1.8rem;
+
+  /* Size */
+  --border-radius-size: 8px;
+  --icon-large-size: 28px;
+  --icon-small-size: 22px;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  cursor: default;
+  margin: 0;
+  height: 100vh;
+}
+
+/* Initialization */
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* Header */
+.header {
+  background-color: black;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+}
+
+.header__logo {
+  flex-basis: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__icon {
+  color: red;
+  margin-right: 4px;
+}
+
+.logo__text {
+  color: white;
+}
+
+.header__search {
+  border: 1px solid red;
+  flex-basis: 85%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__input {
+  width: 95%;
+}
+
+.search__btn {
+  width: 5%;
+  background-color: rgba(102, 102, 100, 0.714)
+}
+
+@media screen and(max-width: 768px) {
+  
+}
