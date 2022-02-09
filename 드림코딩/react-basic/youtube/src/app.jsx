@@ -1,9 +1,13 @@
 import './app.css';
 import Header from './components/header';
+import Videos from './components/videos';
 
 function App() {
   return (
-    <Header />
+    <>
+      <Header />
+      <Videos />
+    </>
   )
 }
 

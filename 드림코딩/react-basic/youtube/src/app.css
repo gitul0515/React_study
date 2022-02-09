@@ -60,6 +60,13 @@ h3 {
   margin: 8px 0px;
 }
 
+h4 {
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+
 p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
@@ -149,6 +156,32 @@ button {
   background-color: rgba(102, 102, 100, 0.714);
 }
 
+/* Videos 영역 */
+.videos {
+  width: 80vw;
+  margin: auto;
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.video {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.video__img {
+  width: 30%;
+}
+
+.video__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
   .header {
     width: 100vw;
@@ -160,5 +193,9 @@ button {
 
   .search__btn {
     display: none;
+  }
+
+  .videos {
+    width: 100vw;
   }
 }
