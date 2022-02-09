@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="header">
       <a className="header__logo" href="https:">
-        <FontAwesomeIcon className="logo__icon" icon={faYoutube} />
+        <FontAwesomeIcon className="logo__img" icon={faYoutube}/>
         <span className="logo__text">Youtube</span>
       </a>
       <form className="header__search">
