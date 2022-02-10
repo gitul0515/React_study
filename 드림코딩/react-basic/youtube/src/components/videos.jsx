@@ -1,18 +1,17 @@
 import Video from "./video";
 
-export default function Videos() {
+export default function Videos(props) {
+  const topVideoList = props.topVideoList;
   return (
     <ul className="videos">
-      <Video />
-      <Video />
-      <Video />
-      <Video />
-      <Video />
-      <Video />
-      <Video />
-      <Video />
-      
-      
+      {
+        topVideoList.map(topVideo => (
+          <Video 
+            key={topVideo.id}
+            topVideo={topVideo}
+          />
+        ))
+      }
     </ul>
   )
 }
