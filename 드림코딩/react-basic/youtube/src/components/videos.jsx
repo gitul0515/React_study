@@ -1,7 +1,7 @@
 import Video from "./video";
 
 export default function Videos(props) {
-  const topVideoList = props.topVideoList;
+  const { topVideoList } = props;
   return (
     <ul className="videos">
       {
