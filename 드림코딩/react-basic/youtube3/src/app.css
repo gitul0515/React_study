@@ -170,11 +170,11 @@ button {
 .videos {
   width: 80vw;
   margin: auto;
-  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 .video {

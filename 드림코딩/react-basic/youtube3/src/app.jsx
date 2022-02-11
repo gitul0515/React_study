@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './app.css';
 import Header from './components/header';
 import Videos from './components/videos';
-import Detail from './components/detail';
 import { memo } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App = memo(() => {
   const [topVideoList, setTopVideoList] = useState([]);
@@ -21,19 +19,7 @@ const App = memo(() => {
   return (
     <>
       <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route 
-            path="/" 
-            element={<Videos topVideoList={topVideoList}/>} 
-          />
-          <Route 
-            path="/components/detail" 
-            element={<Detail/>} 
-          />
-        </Routes>
-        
-      </BrowserRouter>
+      <Videos topVideoList={topVideoList}/>
     </>
   )
 });
