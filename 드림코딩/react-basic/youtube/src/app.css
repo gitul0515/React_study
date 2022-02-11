@@ -198,7 +198,7 @@ button {
   height: 120px;
 }
 
-.video__description {
+.video__title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -210,8 +210,25 @@ button {
   margin-bottom: 6px;
 }
 
-.video__channel-title {
+.video__title-channel {
   font-size: var(--font-micro);
+}
+
+.detail {
+  margin-top: 5px;
+  display: flex;
+}
+
+.detail .videos {
+  flex-direction: column;
+  position: sticky;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.detail .videos .video {
+  width: 350px;
+  
 }
 
 @media screen and (max-width: 768px) {

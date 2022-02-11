@@ -1,14 +1,14 @@
 import Video from "./video";
 
 export default function Videos(props) {
-  const { topVideoList } = props;
+  const { videos } = props;
   return (
     <ul className="videos">
       {
-        topVideoList.map(topVideo => (
+        videos.map(video => (
           <Video 
-            key={topVideo.id}
-            topVideo={topVideo}
+            key={video.id}
+            video={video}
           />
         ))
       }

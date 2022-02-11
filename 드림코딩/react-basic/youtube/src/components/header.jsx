@@ -1,7 +1,6 @@
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
