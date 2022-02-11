@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './app.css';
 import Header from './components/header';
 import Videos from './components/videos';
-import Detail from './components/detail';
+import VideoDetail from './components/video-detail';
 import { memo } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ const App = memo(() => {
           />
           <Route 
             path="/components/detail" 
-            element={<Detail/>} 
+            element={<VideoDetail/>} 
           />
         </Routes>
         

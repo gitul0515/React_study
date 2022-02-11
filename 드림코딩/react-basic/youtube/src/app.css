@@ -91,8 +91,8 @@ p {
 body {
   font-family: 'Roboto', sans-serif;
   cursor: default;
-  margin: 0;
   height: 100vh;
+  padding: 0 100px;
   background-color: beige;
 }
 
@@ -116,7 +116,6 @@ button {
 /* Header */
 .header {
   background-color: black;
-  width: 80vw;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -168,7 +167,6 @@ button {
 
 /* Videos 영역 */
 .videos {
-  width: 80vw;
   margin: auto;
   margin-top: 10px;
   display: flex;
@@ -225,8 +223,8 @@ button {
     --font-micro: 14px;
   }
 
-  .header {
-    width: 100vw;
+  body {
+    padding: 0;
   }
 
   .search__input {
@@ -235,10 +233,6 @@ button {
 
   .search__btn {
     display: none;
-  }
-
-  .videos {
-    width: 100vw;
   }
 
   .video {

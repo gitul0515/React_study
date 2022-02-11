@@ -4,7 +4,7 @@ export default function Video(props) {
   const { topVideo } = props;
   return (
     <li className="video">
-      <Link to='/components/detail'>
+      <Link to='/components/detail' state={{ video: topVideo }}>
         <img 
           className="video__thumbnail" 
           src={topVideo.snippet.thumbnails.medium.url} 

@@ -1,11 +1,12 @@
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <header className="header">
-      <a className="header__logo" href="https:">
+      <a className="header__logo" href="http://localhost:3000">
         <FontAwesomeIcon className="logo__img" icon={faYoutube}/>
         <span className="logo__text">Youtube</span>
       </a>
