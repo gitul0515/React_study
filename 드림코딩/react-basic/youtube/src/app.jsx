@@ -30,10 +30,10 @@ const App = memo(() => {
           <Route 
             path="/components/video-content" 
             element={
-            <>
+            <div className='video-content'>
               <VideoContent/>
               <Videos videos={topVideos} />
-            </>
+            </div>
           } 
           />
         </Routes>

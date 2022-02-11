@@ -4,7 +4,7 @@ function VideoContent() {
   const { video } = useLocation().state;
   console.log(video);
   return (
-    <article className="video-content">
+    <article>
       <iframe 
         className="video-content__player" title={video.id} 
         type="text/html" width="800" height="405"
@@ -12,7 +12,7 @@ function VideoContent() {
         frameBorder="0" allow="autoplay" allowFullScreen>
       </iframe>
       <section className="video-content__description">
-        
+        <h1>hello</h1>
       </section>
     </article>
   )

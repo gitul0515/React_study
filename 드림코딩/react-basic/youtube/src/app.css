@@ -214,19 +214,19 @@ button {
   font-size: var(--font-micro);
 }
 
-.detail {
+.video-content {
   margin-top: 5px;
   display: flex;
 }
 
-.detail .videos {
+.video-content .videos {
   flex-direction: column;
   position: sticky;
   margin-top: 0;
   padding-top: 0;
 }
 
-.detail .videos .video {
+.video-content .videos .video {
   width: 350px;
   
 }
