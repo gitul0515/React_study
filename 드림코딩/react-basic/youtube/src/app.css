@@ -231,6 +231,23 @@ button {
   
 }
 
+.video-content__title {
+  margin: 20px 0 10px 0;
+}
+
+.video-content__title-channel {
+  display: inline-block;
+  margin: 0 10px 20px 0;
+}
+
+.video-content__text {
+  padding: 20px 0 20px 0;
+  margin-right: 20px;
+  font-size: var(--font-micro);
+  line-height: 1.4rem;
+  border-top: 2px solid rgb(151, 149, 149);
+}
+
 @media screen and (max-width: 768px) {
   :root {
     --font-large: 40px;
@@ -254,5 +271,23 @@ button {
 
   .video {
     flex-basis: 90%;
+  }
+
+  .video-content__player {
+    width: 100vw;
+  }
+
+  .video-content {
+    flex-direction: column;
+  }
+
+  .video-content__description {
+    margin-left: 20px;
+    word-wrap: break-word;
+  }
+
+  .video-content__text {
+    border-bottom: 2px solid rgb(151, 149, 149);
+    margin-bottom: 20px;
   }
 }

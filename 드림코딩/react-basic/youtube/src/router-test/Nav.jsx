@@ -9,11 +9,11 @@ const Nav = () => {
         <Link to='/'>
           <li>Main</li>
         </Link>
-        <Link to='/About'>
-          <li>About</li>
+        <Link to='/login'>
+          <li>LogIn</li>
         </Link>
-        <Link to='/Info'>
-          <li>Info</li>
+        <Link to='/logout'>
+          <li>LogOut</li>
         </Link>
       </ul>
     </nav>

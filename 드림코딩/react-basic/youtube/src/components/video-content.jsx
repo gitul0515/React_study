@@ -8,11 +8,14 @@ function VideoContent() {
       <iframe 
         className="video-content__player" title={video.id} 
         type="text/html" width="800" height="405"
-        src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
-        frameBorder="0" allow="autoplay" allowFullScreen>
+        src={`https://www.youtube.com/embed/${video.id}`}
+        frameBorder="0" allowFullScreen>
       </iframe>
       <section className="video-content__description">
-        <h1>hello</h1>
+        <h4 className="video-content__title">{video.snippet.title}</h4>
+        <span className="video-content__title-channel">{video.snippet.channelTitle}</span>
+        <span className="video-content__date">{video.snippet.publishedAt.slice(0, 10)}</span>
+        <p className="video-content__text">{video.snippet.description}</p>
       </section>
     </article>
   )

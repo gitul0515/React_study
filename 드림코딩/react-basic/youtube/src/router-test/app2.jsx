@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./Nav";
-import About from "./About";
-import Info from "./Info";
+import Login from "./login";
+import Logout from "./logout";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 const App2 = () => {
@@ -10,8 +10,8 @@ const App2 = () => {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/About" element={<About />} />
-          <Route path="/Info" element={<Info />} />
+          <Route path="/home" element={<Login />} />
+          <Route path="/login" element={<Logout />} />
         </Routes>
       </BrowserRouter>
     </div>
