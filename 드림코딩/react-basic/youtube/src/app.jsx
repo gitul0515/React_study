@@ -16,12 +16,12 @@ const App = memo(() => {
     .catch(err => console.log(err))
   }, []);
 
-  const handleUpdateVideos = value => {
+  const handleUpdateVideos = useCallback(value => {
     fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${value}&key=AIzaSyApe30tsjafvMnnykLW9pjN1YihHEi04PQ`)
     .then(response => response.json())
     .then(data => setTopVideos(data.items))
     .catch(err => console.log(err))
-  }
+  }, []);
 
   return (
     <>
@@ -42,7 +42,6 @@ const App = memo(() => {
           } 
           />
         </Routes>
-        
       </BrowserRouter>
     </>
   )
