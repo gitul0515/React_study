@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './app.css';
 import Header from './components/header';
 import Videos from './components/videos';
@@ -16,11 +16,16 @@ const App = memo(() => {
     .catch(err => console.log(err))
   }, []);
 
-  console.log(topVideos);
+  const handleUpdateVideos = value => {
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=24&q=${value}&key=AIzaSyApe30tsjafvMnnykLW9pjN1YihHEi04PQ`)
+    .then(response => response.json())
+    .then(data => setTopVideos(data.items))
+    .catch(err => console.log(err))
+  }
 
   return (
     <>
-      <Header />
+      <Header onSubmit={handleUpdateVideos}/>
       <BrowserRouter>
         <Routes>
           <Route 

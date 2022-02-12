@@ -3,12 +3,13 @@ import { useLocation } from "react-router-dom";
 function VideoContent() {
   const { video } = useLocation().state;
   console.log(video);
+  const id = video.id.videoId || video.id.playlistId || video.id.channelId || video.id;
   return (
     <article>
       <iframe 
         className="video-content__player" title={video.id} 
         type="text/html" width="800" height="405"
-        src={`https://www.youtube.com/embed/${video.id}`}
+        src={`https://www.youtube.com/embed/${id}`}
         frameBorder="0" allowFullScreen>
       </iframe>
       <section className="video-content__description">
