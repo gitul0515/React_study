@@ -1,0 +1,31 @@
+.video {
+  display: flex;
+  align-items: center;
+  width: 48%;
+  border: 2px solid gainsboro;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.video:hover {
+  transform: scale(1.03);
+}
+
+.thumbnail {
+  width: 40%;
+  height: 100%;
+}
+
+.metadata {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.title {
+  margin-bottom: 6px;
+}
+
+.channel {
+
+}
