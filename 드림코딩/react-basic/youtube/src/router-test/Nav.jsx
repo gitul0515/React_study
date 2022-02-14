@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   return (
     <nav>
-      <h3>This is Logo</h3>
-      <ul>
+      <h3>목차</h3>
+      <ol>
         <Link to='/'>
-          <li>Main</li>
+          <li>Home</li>
         </Link>
         <Link to='/login'>
           <li>LogIn</li>
@@ -15,7 +15,7 @@ const Nav = () => {
         <Link to='/logout'>
           <li>LogOut</li>
         </Link>
-      </ul>
+      </ol>
     </nav>
   )
 };

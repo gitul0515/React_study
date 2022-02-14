@@ -10,8 +10,8 @@ const App2 = () => {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/home" element={<Login />} />
-          <Route path="/login" element={<Logout />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>
     </div>

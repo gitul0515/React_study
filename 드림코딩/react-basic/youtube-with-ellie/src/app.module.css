@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 0;
+}
+
 h4 {
   font-size: 16px;
   margin: 0;
@@ -20,7 +24,14 @@ p {
   font-size: 14px;
 }
 
+.app {
+  max-width: 80rem;
+}
+
 body {
   padding: 0 100px;
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

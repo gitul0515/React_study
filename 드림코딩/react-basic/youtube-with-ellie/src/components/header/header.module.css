@@ -1,0 +1,26 @@
+.header {
+  background-color: black;
+  display: flex;
+  padding: 20px 20px;
+}
+
+.logo {
+  color: white;
+  margin-right: 1rem;
+}
+
+.searchBar {
+  flex-basis: 100%;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.searchBtn {
+  font-size: 1.1rem;
+  border: none;
+  background-color: rgb(201, 197, 197);
+  cursor: pointer;
+  padding: 10px;
+  border-left: 1px solid black;
+}
