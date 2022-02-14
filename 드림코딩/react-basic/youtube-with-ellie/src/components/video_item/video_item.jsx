@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './video_item.module.css'
 
-const VideoItem = ({ video: { snippet } }) => {
-  return (
-    <li className={styles.video}>
+const VideoItem = ({ video, onVideoClick }) => {
+  const { snippet } = video;
+
+  const handleVideoClick = () => {
+    onVideoClick && onVideoClick(video);
+  }
+
+  return ( 
+    <li className={styles.video} onClick={handleVideoClick}>
       <img src={snippet.thumbnails.medium.url} alt="비디오 썸네일" className={styles.thumbnail} />
       <div className={styles.metadata}>
         <h4 className={`${styles.title} ${styles.ellipsis}`}>{snippet.title}</h4>

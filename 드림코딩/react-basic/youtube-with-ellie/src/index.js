@@ -4,11 +4,11 @@ import './index.css';
 import App from './app';
 import Youtube from './service/youtube';
 
-const youtube = new Youtube(process.env.REACT_APP_YOUTUBE_KEY);
+const youtubeAPI = new Youtube(process.env.REACT_APP_YOUTUBE_KEY);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App youtube={youtube}/>
+    <App youtubeAPI={youtubeAPI}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
