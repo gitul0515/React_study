@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './video_item.module.css'
 
-const VideoItem = ({ video, onVideoClick, selected }) => {
+const VideoItem = memo(({ video, onVideoClick, selected }) => {
   const { snippet } = video;
 
   const handleVideoClick = () => {
@@ -17,6 +17,6 @@ const VideoItem = ({ video, onVideoClick, selected }) => {
       </div>
     </li>
   )
-};
+});
 
 export default VideoItem;

@@ -5,6 +5,7 @@ const VideoDetail = ({video}) => {
   return (
     <section className={styles.videoDetail}>
       <iframe 
+        title='youtube video'
         id={video.id} 
         type="text/html" 
         width="720" height="405" 

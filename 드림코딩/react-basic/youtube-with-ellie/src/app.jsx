@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import VideoList from './components/video_list/video_list';
 import styles from './app.module.css';
 import Header from './components/header/header';
@@ -12,20 +12,20 @@ const App = ({youtubeAPI}) => {
     youtubeAPI.getMostPopulars()
     .then(result => setVideos(result.items))
     .catch(error => console.log('error', error));
-  }, []);
+  }, [youtubeAPI]);
 
-  const handleSearch = (query) => {
+  const handleSearch = useCallback((query) => {
     youtubeAPI.getSearchResults(query)
     .then(items => {
       setSelectedVideo(null);
       setVideos(items);
     })
     .catch(error => console.log('error', error));
-  };
+  }, [youtubeAPI]);
 
-  const selectVideo = (video) => {
+  const selectVideo = useCallback((video) => {
     setSelectedVideo(video);
-  }
+  }, []);
 
   return (
     <div className={styles.app}>
@@ -34,7 +34,7 @@ const App = ({youtubeAPI}) => {
         {
           selectedVideo && <VideoDetail video={selectedVideo}/>
         }
-        <VideoList videos={videos} onVideoClick={selectVideo} selected={selectedVideo}/>
+        <VideoList videos={videos} onVideoClick={selectVideo} selected={selectedVideo ? true : false}/>
       </div>
     </div>
   )
