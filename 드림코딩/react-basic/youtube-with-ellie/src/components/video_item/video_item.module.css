@@ -1,11 +1,18 @@
 .video {
   display: flex;
   align-items: center;
-  width: 48%;
   border: 2px solid gainsboro;
   margin: 5px;
   cursor: pointer;
   transition: 0.3s ease-in;
+}
+
+.video.selected {
+  flex-basis: 100%;
+}
+
+.video.unselected {
+  flex-basis: 48%;
 }
 
 .video:hover {
@@ -38,4 +45,10 @@
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word; 
+}
+
+@media screen and (max-width: 767px) {
+  .video {
+    flex-basis: 100%;
+  }
 }

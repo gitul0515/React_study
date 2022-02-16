@@ -16,7 +16,10 @@ const App = ({youtubeAPI}) => {
 
   const handleSearch = (query) => {
     youtubeAPI.getSearchResults(query)
-    .then(items => setVideos(items))
+    .then(items => {
+      setSelectedVideo(null);
+      setVideos(items);
+    })
     .catch(error => console.log('error', error));
   };
 
@@ -27,10 +30,12 @@ const App = ({youtubeAPI}) => {
   return (
     <div className={styles.app}>
       <Header onSearch={handleSearch}/>
-      {
-        selectedVideo && <VideoDetail video={selectedVideo}/>
-      }
-      <VideoList videos={videos} onVideoClick={selectVideo}/>
+      <div className={styles.videoContent}>
+        {
+          selectedVideo && <VideoDetail video={selectedVideo}/>
+        }
+        <VideoList videos={videos} onVideoClick={selectVideo} selected={selectedVideo}/>
+      </div>
     </div>
   )
 };

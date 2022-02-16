@@ -5,11 +5,13 @@ const Header = ({onSearch}) => {
   const inputRef = useRef();
 
   const handleSearch = () => {
-    onSearch && onSearch(inputRef.current.value);
+    const { value } = inputRef.current;
+    if (value === '') return;
+    onSearch && onSearch(value);
     inputRef.current.value = '';
   };
 
-  const onKeyDown = e => {
+  const onKeyUp = e => {
     if (e.code === 'Enter') handleSearch();
   };
 
@@ -19,8 +21,11 @@ const Header = ({onSearch}) => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.logo}>youtube</h1>
-      <input className={styles.searchBar} type="search" placeholder='search...' ref={inputRef} onKeyDown={onKeyDown}/>
+      <a href="http://localhost:3000"><h1 className={styles.logo}>youtube</h1></a> 
+      <input 
+        className={styles.searchBar} type="search" placeholder='search...' ref={inputRef} 
+        onKeyUp={onKeyUp}
+      />
       <button className={styles.searchBtn} onClick={onClick}>Go</button>
     </header>
   );
