@@ -10,7 +10,7 @@ const App = ({youtubeAPI}) => {
 
   useEffect(() => {
     youtubeAPI.getMostPopulars()
-    .then(result => setVideos(result.items))
+    .then(result => setVideos(result))
     .catch(error => console.log('error', error));
   }, [youtubeAPI]);
 
