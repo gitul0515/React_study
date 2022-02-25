@@ -1,0 +1,14 @@
+.header {
+  background-color: #385461;
+  padding: 7px;
+}
+
+.header img {
+  display: block;
+  margin: 0 auto;
+  width: 10%;
+}
+
+.header h1 {
+  color: #ffffff;
+}
