@@ -1,10 +1,13 @@
+@values makerWhite, makerGreen from '/src/common/colors.css';
+
 .footer {
-  background-color: #385461;
+  background-color: makerGreen;
   padding: 10px;
+  text-align: center;
 }
 
 .footer h3 {
-  color: #ffffff;
+  color: makerWhite;
   font-size: 0.8rem;
   font-weight: normal;
 }

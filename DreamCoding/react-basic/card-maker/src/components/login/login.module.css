@@ -1,15 +1,13 @@
+@values makerWhite, makerGreen, makerLightPink from '/src/common/colors.css';
+
 .login {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
   width: 450px;
 }
 
 .main {
   padding: 18px 10px;
-  background-color: #ffffff;
+  background-color: makerWhite;
 }
 
 .main h1 {
@@ -22,10 +20,14 @@
   width: 100%;
   margin: 0 auto;
   color: #354b55;
-  border: 2.4px solid #385461;
+  border: 2.4px solid makerGreen;
   border-radius: 15px;
   padding: 8px;
   margin-bottom: 6px;
   cursor: pointer;
   font-size: 15px;
+}
+
+.main button:hover {
+  background-color: makerLightPink;
 }
