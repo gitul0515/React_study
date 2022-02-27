@@ -3,10 +3,10 @@ import styles from './main.module.css';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
-const Main = ({isLogged, authService}) => {
+const Main = ({authService}) => {
   return (
     <section className={styles.main}>
-      <Header authService={authService} isLogged={isLogged}/>
+      <Header authService={authService} isLogged={true}/>
       <section className={styles.content}>
 
       </section>

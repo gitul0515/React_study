@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from 'react-router-dom';
 
-const Header = ({isLogged, authService}) => {
+const Header = ({authService, isLogged}) => {
   const navigate = useNavigate();
   const onLogout = () => {
     authService
