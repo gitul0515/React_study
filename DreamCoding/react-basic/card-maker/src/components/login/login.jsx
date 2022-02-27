@@ -4,21 +4,20 @@ import Header from '../header/header';
 import styles from './login.module.css';
 import { useNavigate } from 'react-router-dom';
 
-const Login = ({authService}) => {
-  const [onlogOut, setOnlogOut] = useState(false);
+const Login = ({authService, handleLogin}) => {
   const navigate = useNavigate();
 
   const onLogin = (event) => {
     authService
     .login(event.currentTarget.textContent)
     .then(() => navigate('/main'))
-    .then(() => setOnlogOut(true))
+    .then(() => handleLogin(true))
     .catch(() => console.error('error'));
   };
 
   return (
     <section className={styles.login}>
-      <Header onlogOut={onlogOut}/>
+      <Header />
       <section className={styles.main}>
         <h1>Login</h1>
         <ul>

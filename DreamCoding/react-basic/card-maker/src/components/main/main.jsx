@@ -3,12 +3,12 @@ import styles from './main.module.css';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 
-const Main = () => {
+const Main = ({isLogged, authService}) => {
   return (
     <section className={styles.main}>
-      <Header />
+      <Header authService={authService} isLogged={isLogged}/>
       <section className={styles.content}>
-        
+
       </section>
       <Footer />
     </section>
