@@ -10,6 +10,12 @@ class AuthService {
   logout() {
     return firebaseApp.auth().signOut();
   }
+
+  onAuthStateChanged(callBack) {
+    firebase.auth().onAuthStateChanged(user => {
+      callBack(user);
+    })
+  }
 }
 
 export default AuthService;

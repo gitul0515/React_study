@@ -9,7 +9,7 @@ const Header = ({authService, isLogged}) => {
   const onLogout = () => {
     authService
     .logout()
-    .then(() => navigate('/'))
+    .then(() => navigate(-1))
     .catch(() => console.error('logout error'));
   };
 
