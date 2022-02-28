@@ -9,7 +9,7 @@ const Login = ({authService}) => {
 
   const goToMain = (userId) => {
     navigate('/main', { state: {id: userId}});
-  }
+  };
 
   const onLogin = (event) => {
     authService
