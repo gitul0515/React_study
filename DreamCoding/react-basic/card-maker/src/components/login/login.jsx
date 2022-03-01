@@ -8,23 +8,17 @@ const Login = ({authService}) => {
   const navigate = useNavigate();
 
   const goToMain = (userId) => {
-    navigate('/main', { state: {id: userId}});
+    navigate('/main', {state: {id: userId}});
   };
 
   const onLogin = (event) => {
     authService
     .login(event.currentTarget.textContent)
     .then(data => goToMain(data.user.uid))
-    .catch(() => console.error('error'))
+    .catch(() => console.log('Login failure'))
   };
 
-  const onUserChanged = user => {
-    if (user) {
-      goToMain(user.uid);
-    }
-  }
-
-  // 사용자의 로그인 정보가 있다면, 
+  // 사용자의 로그인 정보가 있으면, 
   // 로그인 절차를 생략하고 main 페이지로 이동한다.
   useEffect(() => {
     authService
@@ -37,8 +31,8 @@ const Login = ({authService}) => {
 
   return (
     <section className={styles.login}>
-      <Header isLogged={false}/>
-      <section className={styles.main}>
+      <Header />
+      <section className={styles.content}>
         <h1>Login</h1>
         <ul>
           <li>

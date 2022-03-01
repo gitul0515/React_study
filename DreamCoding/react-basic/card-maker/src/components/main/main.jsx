@@ -36,9 +36,12 @@ const Main = ({authService}) => {
 
   const navigate = useNavigate();
   const onLogout = () => {
-    authService.logout();
+    authService.logout()
+    .catch(() => console.log('Logout failure'));
   };
 
+  // 사용자의 로그인 정보가 없으면,
+  // 로그인 페이지(/)로 이동한다. 
   useEffect(() => {
     authService
     .onAuthStateChanged(user => {

@@ -11,9 +11,9 @@ class AuthService {
     return firebaseApp.auth().signOut();
   }
 
-  onAuthStateChanged(callBack) {
+  onAuthStateChanged(callBackFunc) {
     firebase.auth().onAuthStateChanged(user => {
-      callBack(user);
+      callBackFunc(user);
     })
   }
 }
