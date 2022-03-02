@@ -1,0 +1,45 @@
+@value makerBlack, makerWhite from '/src/common/colors.css';
+
+.card {
+  background-color: makerBlack;
+  color: makerWhite;
+  font-size: 0.96rem;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 24px;
+  border: 2px solid #626262;
+  border-radius: 20px;
+
+}
+
+.photo {
+  width: 22%;
+  margin-right: 35px;
+  border-radius: 50%;
+}
+
+.information {
+  width: 100%;
+}
+
+.information__main {
+  padding-bottom: 8px;
+  border-bottom: 1px solid makerWhite;
+  margin-bottom: 8px;
+}
+
+.information__main h2 {
+  margin-bottom: 3px;
+}
+
+.information__sub span {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.motto {
+  margin-top: 7px;
+}

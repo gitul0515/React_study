@@ -1,10 +1,15 @@
 import React from 'react';
 import styles from './maker.module.css';
 
-const Maker = ({cards}) => {
+const Maker = ({profiles}) => {
   return (
     <section className={styles.cardMaker}>
       <h1 className={styles.title}>Card Maker</h1>
+      <ul>
+        {
+
+        }
+      </ul>
     </section>
   );
 };
