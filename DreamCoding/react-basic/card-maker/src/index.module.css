@@ -10,6 +10,7 @@
 @value makerShadow from './common/colors.css';
 @value makerColorful from './common/colors.css';
 @value makerWheat from './common/colors.css';
+@value mediaQuery from './common/size.css';
 
 * {
   box-sizing: border-box;
@@ -52,4 +53,10 @@ button {
   background-color: transparent;
   cursor: pointer;
   padding: 0;
+}
+
+@media screen and (max-width: mediaQuery) {
+  body {
+    height: auto;
+  }
 }

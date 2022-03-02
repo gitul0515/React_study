@@ -35,6 +35,24 @@ const Main = ({authService}) => {
       motto: "\"Stay hungry, Stay Foolish\"",
       photoURL: "/images/default_logo.png"
     },
+    {
+      name: "Haley",
+      id: 3, 
+      workplace: "Naver",
+      job: "UI/UX Designer",
+      email: "linhong7@hanmail.net",
+      motto: "\"Stay hungry, Stay Foolish\"",
+      photoURL: "/images/default_logo.png"
+    },
+    {
+      name: "Haley",
+      id: 3, 
+      workplace: "Naver",
+      job: "UI/UX Designer",
+      email: "linhong7@hanmail.net",
+      motto: "\"Stay hungry, Stay Foolish\"",
+      photoURL: "/images/default_logo.png"
+    },    
   ]);
 
   const navigate = useNavigate();

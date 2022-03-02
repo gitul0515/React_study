@@ -7,7 +7,9 @@ const Maker = ({profiles}) => {
       <h1 className={styles.title}>Card Maker</h1>
       <ul>
         {
-
+          profiles.map(profile => {}
+            
+          )
         }
       </ul>
     </section>
