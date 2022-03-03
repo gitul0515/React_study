@@ -9,50 +9,35 @@ import Preview from '../preview/preview';
 const Main = ({authService}) => {
   const [profiles, setProfiles] = useState([
     {
+      id: 1,
       name: "Ellie",
-      id: 1, 
-      workplace: "Samsung Electronics",
+      company: "Samsung Electronics",
       job: "Sofware Engineer",
       email: "dreamCoder@gmail.com",
       motto: "\"Don't forget to code your dream\"",
+      cardTheme: "black",
       photoURL: "/images/default_logo.png"
     },
     {
+      id: 2,
       name: "James",
-      id: 2, 
-      workplace: "Google",
+      company: "Google",
       job: "Senior Software Engineer",
       email: "gitul0515@gmail.com",
       motto: "\"Coding is my life\"",
+      cardTheme: "white",
       photoURL: "/images/default_logo.png"
     },
     {
-      name: "Haley",
       id: 3, 
-      workplace: "Naver",
+      name: "Haley",
+      company: "Naver",
       job: "UI/UX Designer",
       email: "linhong7@hanmail.net",
       motto: "\"Stay hungry, Stay Foolish\"",
-      photoURL: "/images/default_logo.png"
-    },
-    {
-      name: "Haley",
-      id: 3, 
-      workplace: "Naver",
-      job: "UI/UX Designer",
-      email: "linhong7@hanmail.net",
-      motto: "\"Stay hungry, Stay Foolish\"",
-      photoURL: "/images/default_logo.png"
-    },
-    {
-      name: "Haley",
-      id: 3, 
-      workplace: "Naver",
-      job: "UI/UX Designer",
-      email: "linhong7@hanmail.net",
-      motto: "\"Stay hungry, Stay Foolish\"",
-      photoURL: "/images/default_logo.png"
-    },    
+      cardTheme: "colorful",
+      photoURL: null
+    }
   ]);
 
   const navigate = useNavigate();
