@@ -3,9 +3,10 @@
 .button {
   font-size: 1.1rem;
   background-color: makerPink;
+  padding: 10px;
   color: makerBlack;
   font-weight: 600;
-  flex-basis: 50%;
+  width: 50%;
   border: 1px solid black;
   border-top: none;
   border-right: none;

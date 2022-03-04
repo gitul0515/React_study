@@ -8,18 +8,24 @@ const CardEditForm = ({profile}) => {
   return (
     <li className={styles.cardEditForm}>
       <form className={styles.form}>
-        <input className={styles.name} type="text" name="name" value={name} />
-        <input className={styles.company} type="text" name="company" value={company} />
-        <select className={styles.cardTheme} name="cardTheme" value={cardTheme}>
-          <option value="black">black</option>
-          <option value="white">white</option>
-          <option value="colorful">colorful</option>
-        </select>
-        <input className={styles.job} type="text" name="job" value={job} />
-        <input className={styles.email} type="text" name="email" value={email} />
+        <div>
+          <input className={styles.name} type="text" name="name" value={name} />
+          <input className={styles.company} type="text" name="company" value={company} />
+          <select className={styles.cardTheme} name="cardTheme" value={cardTheme}>
+            <option value="black">black</option>
+            <option value="white">white</option>
+            <option value="colorful">colorful</option>
+          </select>
+        </div>
+        <div>
+          <input className={styles.job} type="text" name="job" value={job} />
+          <input className={styles.email} type="text" name="email" value={email} />
+        </div>
         <textarea className={styles.motto} name="motto" value={motto}></textarea>
-        <ImageFileInput name={name}/>
-        <Button text="delete"/>
+        <div>
+          <ImageFileInput name={name}/>
+          <Button text="delete"/>
+        </div>
       </form>
     </li>
   );

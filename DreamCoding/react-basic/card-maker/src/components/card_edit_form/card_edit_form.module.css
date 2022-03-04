@@ -1,32 +1,36 @@
+@value mediaQuery from '/src/common/size.css';
+
 .cardEditForm {
   margin-bottom: 20px;
-
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
 
 }
 
-.name, .company {
+.form div:first-of-type {
+  height: 40px;
+}
+
+.name, .company, .cardTheme {
   padding: 8px;
-  flex-basis: 33%;
+  width: 33%;
+  height: 100%;
   font-size: 1.1rem;
   border-right: none;
+  border-bottom: none;
 }
 
 .cardTheme {
-  padding: 8px;
-  flex-basis: 34%;
-  font-size: 1.1rem;
+  width: 34%;
+  border-right: 1px solid black;
 }
 
 .job, .email {
   padding: 8px;
   font-size: 1.1rem;
-  flex-basis: 50%;
-  border-top: none;
+  width: 50%;
+  border-bottom: none;
 }
 
 .job {
@@ -34,9 +38,15 @@
 }
 
 .motto {
+  display: block;
+  width: 100%;
   padding: 8px;
   font-size: 1.1rem;
-  flex-basis: 100%;
-  border-top: none;
   height: 60px;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .cardTheme {
+    height: 39px;
+  }
 }
