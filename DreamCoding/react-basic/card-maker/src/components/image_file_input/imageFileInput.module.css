@@ -1,0 +1,12 @@
+@value makerPink, makerBlack from '/src/common/colors.css';
+
+.button {
+  font-size: 1.1rem;
+  background-color: makerPink;
+  color: makerBlack;
+  font-weight: 600;
+  flex-basis: 50%;
+  border: 1px solid black;
+  border-top: none;
+  border-right: none;
+}

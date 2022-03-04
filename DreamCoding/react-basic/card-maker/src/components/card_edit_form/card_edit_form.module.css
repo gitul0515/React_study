@@ -1,3 +1,42 @@
 .cardEditForm {
-  
+  margin-bottom: 20px;
+
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.name, .company {
+  padding: 8px;
+  flex-basis: 33%;
+  font-size: 1.1rem;
+  border-right: none;
+}
+
+.cardTheme {
+  padding: 8px;
+  flex-basis: 34%;
+  font-size: 1.1rem;
+}
+
+.job, .email {
+  padding: 8px;
+  font-size: 1.1rem;
+  flex-basis: 50%;
+  border-top: none;
+}
+
+.job {
+  border-right: none;
+}
+
+.motto {
+  padding: 8px;
+  font-size: 1.1rem;
+  flex-basis: 100%;
+  border-top: none;
+  height: 60px;
 }

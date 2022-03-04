@@ -32,6 +32,8 @@ const getStyles = (theme) => {
       return styles.themeWhite;
     case "colorful":
       return styles.themeColorful;
+    default: 
+      throw new Error(`unknown theme: ${theme}`);
   }
 }
 

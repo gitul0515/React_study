@@ -55,6 +55,11 @@ button {
   padding: 0;
 }
 
+input, textarea, select {
+  outline: none;
+  border: 1px solid black;
+}
+
 @media screen and (max-width: mediaQuery) {
   body {
     height: auto;
