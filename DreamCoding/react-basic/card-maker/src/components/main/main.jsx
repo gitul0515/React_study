@@ -15,7 +15,7 @@ const Main = ({authService}) => {
       job: "Sofware Engineer",
       email: "dreamCoder@gmail.com",
       motto: "\"Don't forget to code your dream\"",
-      cardTheme: "black",
+      theme: "black",
       photoURL: "/images/default_logo.png"
     },
     {
@@ -25,7 +25,7 @@ const Main = ({authService}) => {
       job: "Senior Software Engineer",
       email: "gitul0515@gmail.com",
       motto: "\"Coding is my life\"",
-      cardTheme: "white",
+      theme: "white",
       photoURL: "/images/default_logo.png"
     },
     {
@@ -35,7 +35,7 @@ const Main = ({authService}) => {
       job: "UI/UX Designer",
       email: "linhong7@hanmail.net",
       motto: "\"Stay hungry, Stay Foolish\"",
-      cardTheme: "colorful",
+      theme: "colorful",
       photoURL: null
     }
   ]);
@@ -57,11 +57,39 @@ const Main = ({authService}) => {
     })
   })
 
+  const onAdd = (newProfile) => {
+    const { id } = newProfile;
+    setProfiles(
+      profiles.map(profile => {
+        if (profile.id === id) {
+          return newProfile;
+        } else {
+          return profile;
+        }
+      })
+    );
+  }
+
+  const onAddEditForm = () => {
+    const newId = profiles.length + 1;
+    setProfiles([...profiles, 
+    {
+      id: newId, 
+      name: null,
+      company: null,
+      job: null,
+      email:null,
+      motto: null,
+      theme: "black",
+      photoURL: null
+    }]);
+  }
+
   return (
     <section className={styles.main}>
       <Header onLogout={onLogout}/>
       <section className={styles.content}>
-        <Maker profiles={profiles}/>
+        <Maker profiles={profiles} onAddEditForm={onAddEditForm} onAdd={onAdd}/>
         <Preview profiles={profiles}/>
       </section>
       <Footer />

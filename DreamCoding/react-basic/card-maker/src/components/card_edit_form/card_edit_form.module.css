@@ -1,7 +1,7 @@
 @value mediaQuery from '/src/common/size.css';
 
 .cardEditForm {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .form {
@@ -12,17 +12,16 @@
   height: 40px;
 }
 
-.name, .company, .cardTheme {
+.name, .company, .theme {
   padding: 8px;
-  width: 33%;
+  width: 33.33333333%;
   height: 100%;
   font-size: 1.1rem;
   border-right: none;
   border-bottom: none;
 }
 
-.cardTheme {
-  width: 34%;
+.theme {
   border-right: 1px solid black;
 }
 
@@ -46,7 +45,7 @@
 }
 
 @media screen and (max-width: mediaQuery) {
-  .cardTheme {
-    height: 39px;
+  .name, .company {
+    height: 41px;
   }
 }

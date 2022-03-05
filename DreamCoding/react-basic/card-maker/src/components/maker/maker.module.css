@@ -1,10 +1,11 @@
-@value makerGreen, makerLightGrey from '/src/common/colors.css';
+@value makerGreen, makerLightGrey, makerPink from '/src/common/colors.css';
 @value mediaQuery from '/src/common/size.css';
 
 .cardMaker {
   flex-basis: 50%;
   padding: 30px 20px;
   border-right: 2px solid makerLightGrey;
+  background-color: aliceblue;
 }
 
 .title {
@@ -12,6 +13,20 @@
   color: makerGreen;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.addButton {
+  color: makerGreen;
+  border: 5px solid makerPink;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: mediaQuery) {
