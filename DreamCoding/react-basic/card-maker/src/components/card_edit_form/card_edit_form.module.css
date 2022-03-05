@@ -1,11 +1,12 @@
 @value mediaQuery from '/src/common/size.css';
 
 .cardEditForm {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  height: 191px;
 }
 
 .form {
-
+  transform: translateY(6px);
 }
 
 .form div:first-of-type {

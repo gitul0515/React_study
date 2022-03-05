@@ -3,11 +3,11 @@
 
 .cardMaker {
   flex-basis: 50%;
-  padding: 30px 20px;
+  padding: 30px 20px 18px;
   border-right: 2px solid makerLightGrey;
   background-color: aliceblue;
-  height: 100%;
-  overflow-y: scroll;
+  /* height: 100%;
+  overflow-y: scroll; */
 }
 
 .title {

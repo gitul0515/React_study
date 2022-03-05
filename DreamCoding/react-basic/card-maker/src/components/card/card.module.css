@@ -5,11 +5,12 @@
   color: makerWhite;
   font-size: 0.96rem;
   width: 80%;
+  height: 191px;
   max-width: 800px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 24px;
   border: 1px solid #626262;
   border-radius: 20px;
