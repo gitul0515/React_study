@@ -3,7 +3,7 @@ import styles from './card_edit_form.module.css';
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/imageFileInput';
 
-const CardEditForm = ({profile, onAdd}) => {
+const CardEditForm = ({profile, onAdd, onDelete}) => {
   const nameInput = useRef();
   const companyInput = useRef();
   const themeInput = useRef();
@@ -13,7 +13,8 @@ const CardEditForm = ({profile, onAdd}) => {
 
   const onClick = event => {
     event.preventDefault();
-    if (event.target.textContent === 'add') {
+    const buttonText = event.target.textContent;
+    if (buttonText === 'add') {
       const newProfile = {
         id: id, 
         name: nameInput.current.value,
@@ -25,6 +26,8 @@ const CardEditForm = ({profile, onAdd}) => {
         photoURL: null
       }
       onAdd(newProfile);
+    } else if (buttonText === 'delete') {
+      onDelete(id);
     }
   }
 

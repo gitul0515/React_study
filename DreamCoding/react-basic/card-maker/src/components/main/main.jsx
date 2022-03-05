@@ -7,39 +7,6 @@ import Maker from '../maker/maker';
 import Preview from '../preview/preview';
 
 const Main = ({authService}) => {
-  const [profiles, setProfiles] = useState([
-    {
-      id: 1,
-      name: "Ellie",
-      company: "Samsung Electronics",
-      job: "Sofware Engineer",
-      email: "dreamCoder@gmail.com",
-      motto: "\"Don't forget to code your dream\"",
-      theme: "black",
-      photoURL: "/images/default_logo.png"
-    },
-    {
-      id: 2,
-      name: "James",
-      company: "Google",
-      job: "Senior Software Engineer",
-      email: "gitul0515@gmail.com",
-      motto: "\"Coding is my life\"",
-      theme: "white",
-      photoURL: "/images/default_logo.png"
-    },
-    {
-      id: 3, 
-      name: "Haley",
-      company: "Naver",
-      job: "UI/UX Designer",
-      email: "linhong7@hanmail.net",
-      motto: "\"Stay hungry, Stay Foolish\"",
-      theme: "colorful",
-      photoURL: null
-    }
-  ]);
-
   const navigate = useNavigate();
   const onLogout = () => {
     authService.logout()
@@ -57,6 +24,45 @@ const Main = ({authService}) => {
     })
   })
 
+  const [profiles, setProfiles] = useState([
+    {
+      id: getUniqueId(),
+      name: "Ellie",
+      company: "Samsung Electronics",
+      job: "Sofware Engineer",
+      email: "dreamCoder@gmail.com",
+      motto: "\"Don't forget to code your dream\"",
+      theme: "black",
+      photoURL: "/images/default_logo.png"
+    },
+    {
+      id: getUniqueId(),
+      name: "James",
+      company: "Google",
+      job: "Senior Software Engineer",
+      email: "gitul0515@gmail.com",
+      motto: "\"Coding is my life\"",
+      theme: "white",
+      photoURL: "/images/default_logo.png"
+    },
+    {
+      id: getUniqueId(), 
+      name: "Haley",
+      company: "Naver",
+      job: "UI/UX Designer",
+      email: "linhong7@hanmail.net",
+      motto: "\"Stay hungry, Stay Foolish\"",
+      theme: "colorful",
+      photoURL: null
+    }
+  ]);
+
+  const onDelete = (id) => {
+    setProfiles(
+      profiles.filter(profile => profile.id !== id)
+    )
+  }
+
   const onAdd = (newProfile) => {
     const { id } = newProfile;
     setProfiles(
@@ -71,10 +77,9 @@ const Main = ({authService}) => {
   }
 
   const onAddEditForm = () => {
-    const newId = profiles.length + 1;
     setProfiles([...profiles, 
     {
-      id: newId, 
+      id: getUniqueId(), 
       name: null,
       company: null,
       job: null,
@@ -89,12 +94,21 @@ const Main = ({authService}) => {
     <section className={styles.main}>
       <Header onLogout={onLogout}/>
       <section className={styles.content}>
-        <Maker profiles={profiles} onAddEditForm={onAddEditForm} onAdd={onAdd}/>
+        <Maker 
+          profiles={profiles} onAddEditForm={onAddEditForm} onAdd={onAdd} onDelete={onDelete}
+        />
         <Preview profiles={profiles}/>
       </section>
       <Footer />
     </section>
   );
 };
+
+function getUniqueId() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  });
+}
 
 export default Main;

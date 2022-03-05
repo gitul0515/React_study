@@ -4,14 +4,14 @@ import CardEditForm from '../card_edit_form/card_edit_form';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
-const Maker = ({profiles, onAddEditForm, onAdd}) => {
+const Maker = ({profiles, onAddEditForm, onAdd, onDelete}) => {
   return (
     <section className={styles.cardMaker}>
       <h1 className={styles.title}>Card Maker</h1>
       <ul>
         {
           profiles.map(profile => (
-            <CardEditForm key={profile.id} profile={profile} onAdd={onAdd}/>
+            <CardEditForm key={profile.id} profile={profile} onAdd={onAdd} onDelete={onDelete}/>
           ))
         }
       </ul>
