@@ -1,45 +1,24 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import LoginForm from './components/LoginForm/LoginForm';
+import SignUpForm from './components/LoginForm/SignUpForm';
 
-// function App() {
-//   const [count, setCount] = useState(0);
+const onSubmit = async () => {
+  const sleep = () => {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(), 1000);
+    });
+  };
+  await sleep();
+  console.log('submit!');
+};
 
-//   useEffect(() => {
-//     console.log(`clicked ${count} times.`);
-//   }, [count]);
-
-//   useEffect(() => {
-//     console.log('Component Loaded');
-//     const handleScroll = () => {
-//       console.log(window.scrollY);
-//     };
-
-//     document.addEventListener('scroll', handleScroll);
-//     return () => document.removeEventListener('scroll', handleScroll);
-//   }, []);
-
-//   return (
-//     <div>
-//       <div>You clicked {count} times.</div>
-//       <button onClick={() => setCount(count + 1)}>+</button>
-//       <div style={{ height: 10000 }}></div>
-//     </div>
-//   );
-// }
-
-import { useRef } from 'react';
-import Input from './components/Input';
-import AutoCounter from './components/AutoCounter';
-
-function App() {
-  const inputRef = useRef();
-
+const App = () => {
   return (
-    <div>
-      <Input ref={inputRef} />
-      <button onClick={() => inputRef.current.focus()}>Focus</button>
-      <AutoCounter />
-    </div>
+    <>
+      <LoginForm onSubmit={onSubmit} />
+      <SignUpForm onSubmit={onSubmit} />
+    </>
   );
-}
+};
 
 export default App;
