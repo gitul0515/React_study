@@ -11,7 +11,7 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "react-hooks"],
   "rules": {
     "curly": "error",
     "no-console": "warn",
@@ -29,8 +29,12 @@
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": ["function-expression", "arrow-function"],
-        "unnamedComponents": ["function-expression", "arrow-function"]
+        "namedComponents": [
+          "function-declaration",
+          "function-expression",
+          "arrow-function"
+        ],
+        "unnamedComponents": ["arrow-function"]
       }
     ],
     "no-unused-expressions": [
@@ -39,6 +43,8 @@
     ], // 표현식 사용에 제한
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "arrow-body-style": "off",
-    "react/prop-types": "warn"
+    "react/prop-types": "warn",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
   }
 }
