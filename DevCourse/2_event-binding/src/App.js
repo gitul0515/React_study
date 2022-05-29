@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import LoginForm from './components/LoginForm/LoginForm';
 import SignUpForm from './components/LoginForm/SignUpForm';
+import Button from './components/StyledButton';
 
 const onSubmit = async () => {
   const sleep = () => {
@@ -12,13 +13,12 @@ const onSubmit = async () => {
   console.log('submit!');
 };
 
-const App = () => {
+function App() {
   return (
-    <>
-      <LoginForm onSubmit={onSubmit} />
-      <SignUpForm onSubmit={onSubmit} />
-    </>
+    <Button color="red" background="yellow" primary="true">
+      click
+    </Button>
   );
-};
+}
 
 export default App;
