@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropType from 'prop-types';
 
 const ListItem = styled.li`
   display: flex;
@@ -26,12 +27,16 @@ const Keywords = styled.div`
 const EmojiListItem = ({ emoji }) => {
   const { symbol, title, keywords } = emoji;
   return (
-    <ListItem>
+    <ListItem onClick={() => navigator.clipboard.writeText(symbol)}>
       <Symbol>{symbol}</Symbol>
       <Title>{title}</Title>
       <Keywords>{keywords}</Keywords>
     </ListItem>
   );
+};
+
+EmojiListItem.propTypes = {
+  emoji: PropType.shape.isRequired,
 };
 
 export default EmojiListItem;

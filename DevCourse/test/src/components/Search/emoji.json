@@ -1,0 +1,22 @@
+[
+  {
+    "title": "100",
+    "symbol": "😎",
+    "keywords": "one"
+  },
+  {
+    "title": "200",
+    "symbol": "🐶",
+    "keywords": "one two"
+  },
+  {
+    "title": "300",
+    "symbol": "👌",
+    "keywords": "one two three"
+  },
+  {
+    "title": "400",
+    "symbol": "💚",
+    "keywords": "one two three four"
+  }
+]
